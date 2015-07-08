@@ -7,11 +7,14 @@
 //
 
 import UIKit
-
+import FMProgressBarView
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mySlider: UISlider!
+    @IBOutlet weak var pbar: FMProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +23,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func valueChanged(sender: UISlider) {
+        var currentValue = sender.value/sender.maximumValue
+        
+        pbar.progressPercent = CGFloat(currentValue)
+    }
 
 }
 

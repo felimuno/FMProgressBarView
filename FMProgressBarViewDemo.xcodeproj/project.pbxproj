@@ -13,6 +13,13 @@
 		554E72D61B4CD4FF00BD1F0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554E72D51B4CD4FF00BD1F0B /* Images.xcassets */; };
 		554E72D91B4CD4FF00BD1F0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554E72D71B4CD4FF00BD1F0B /* LaunchScreen.xib */; };
 		554E72E51B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E72E41B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.swift */; };
+		554E72F81B4CD51300BD1F0B /* FMProgressBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 554E72F71B4CD51300BD1F0B /* FMProgressBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		554E72FE1B4CD51300BD1F0B /* FMProgressBarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */; };
+		554E73071B4CD51300BD1F0B /* FMProgressBarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E73061B4CD51300BD1F0B /* FMProgressBarViewTests.swift */; };
+		554E730B1B4CD51300BD1F0B /* FMProgressBarView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		554E73141B4CD54600BD1F0B /* FMProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E73131B4CD54600BD1F0B /* FMProgressBarView.swift */; };
+		554E73161B4CD95D00BD1F0B /* FMProgressBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554E73151B4CD95D00BD1F0B /* FMProgressBarView.xib */; };
+		554E73171B4CE6FF00BD1F0B /* FMProgressBarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +30,42 @@
 			remoteGlobalIDString = 554E72C81B4CD4FF00BD1F0B;
 			remoteInfo = FMProgressBarViewDemo;
 		};
+		554E72FF1B4CD51300BD1F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554E72C11B4CD4FF00BD1F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554E72F21B4CD51300BD1F0B;
+			remoteInfo = FMProgressBarView;
+		};
+		554E73011B4CD51300BD1F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554E72C11B4CD4FF00BD1F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554E72C81B4CD4FF00BD1F0B;
+			remoteInfo = FMProgressBarViewDemo;
+		};
+		554E73081B4CD51300BD1F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554E72C11B4CD4FF00BD1F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554E72F21B4CD51300BD1F0B;
+			remoteInfo = FMProgressBarView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		554E730F1B4CD51300BD1F0B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				554E730B1B4CD51300BD1F0B /* FMProgressBarView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		554E72C91B4CD4FF00BD1F0B /* FMProgressBarViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMProgressBarViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +78,14 @@
 		554E72DE1B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMProgressBarViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		554E72E31B4CD4FF00BD1F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554E72E41B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMProgressBarViewDemoTests.swift; sourceTree = "<group>"; };
+		554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMProgressBarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		554E72F61B4CD51300BD1F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554E72F71B4CD51300BD1F0B /* FMProgressBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMProgressBarView.h; sourceTree = "<group>"; };
+		554E72FD1B4CD51300BD1F0B /* FMProgressBarViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMProgressBarViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554E73051B4CD51300BD1F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554E73061B4CD51300BD1F0B /* FMProgressBarViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMProgressBarViewTests.swift; sourceTree = "<group>"; };
+		554E73131B4CD54600BD1F0B /* FMProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMProgressBarView.swift; sourceTree = "<group>"; };
+		554E73151B4CD95D00BD1F0B /* FMProgressBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMProgressBarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554E73171B4CE6FF00BD1F0B /* FMProgressBarView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +101,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554E72EF1B4CD51300BD1F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554E72FA1B4CD51300BD1F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E72FE1B4CD51300BD1F0B /* FMProgressBarView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +127,8 @@
 			children = (
 				554E72CB1B4CD4FF00BD1F0B /* FMProgressBarViewDemo */,
 				554E72E11B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests */,
+				554E72F41B4CD51300BD1F0B /* FMProgressBarView */,
+				554E73031B4CD51300BD1F0B /* FMProgressBarViewTests */,
 				554E72CA1B4CD4FF00BD1F0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +138,8 @@
 			children = (
 				554E72C91B4CD4FF00BD1F0B /* FMProgressBarViewDemo.app */,
 				554E72DE1B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.xctest */,
+				554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */,
+				554E72FD1B4CD51300BD1F0B /* FMProgressBarViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +182,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		554E72F41B4CD51300BD1F0B /* FMProgressBarView */ = {
+			isa = PBXGroup;
+			children = (
+				554E72F71B4CD51300BD1F0B /* FMProgressBarView.h */,
+				554E72F51B4CD51300BD1F0B /* Supporting Files */,
+				554E73131B4CD54600BD1F0B /* FMProgressBarView.swift */,
+				554E73151B4CD95D00BD1F0B /* FMProgressBarView.xib */,
+			);
+			path = FMProgressBarView;
+			sourceTree = "<group>";
+		};
+		554E72F51B4CD51300BD1F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				554E72F61B4CD51300BD1F0B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		554E73031B4CD51300BD1F0B /* FMProgressBarViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				554E73061B4CD51300BD1F0B /* FMProgressBarViewTests.swift */,
+				554E73041B4CD51300BD1F0B /* Supporting Files */,
+			);
+			path = FMProgressBarViewTests;
+			sourceTree = "<group>";
+		};
+		554E73041B4CD51300BD1F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				554E73051B4CD51300BD1F0B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		554E72F01B4CD51300BD1F0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E72F81B4CD51300BD1F0B /* FMProgressBarView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		554E72C81B4CD4FF00BD1F0B /* FMProgressBarViewDemo */ = {
@@ -122,10 +239,12 @@
 				554E72C51B4CD4FF00BD1F0B /* Sources */,
 				554E72C61B4CD4FF00BD1F0B /* Frameworks */,
 				554E72C71B4CD4FF00BD1F0B /* Resources */,
+				554E730F1B4CD51300BD1F0B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				554E73091B4CD51300BD1F0B /* PBXTargetDependency */,
 			);
 			name = FMProgressBarViewDemo;
 			productName = FMProgressBarViewDemo;
@@ -150,6 +269,43 @@
 			productReference = 554E72DE1B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		554E72F21B4CD51300BD1F0B /* FMProgressBarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554E730C1B4CD51300BD1F0B /* Build configuration list for PBXNativeTarget "FMProgressBarView" */;
+			buildPhases = (
+				554E72EE1B4CD51300BD1F0B /* Sources */,
+				554E72EF1B4CD51300BD1F0B /* Frameworks */,
+				554E72F01B4CD51300BD1F0B /* Headers */,
+				554E72F11B4CD51300BD1F0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMProgressBarView;
+			productName = FMProgressBarView;
+			productReference = 554E72F31B4CD51300BD1F0B /* FMProgressBarView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		554E72FC1B4CD51300BD1F0B /* FMProgressBarViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554E73101B4CD51300BD1F0B /* Build configuration list for PBXNativeTarget "FMProgressBarViewTests" */;
+			buildPhases = (
+				554E72F91B4CD51300BD1F0B /* Sources */,
+				554E72FA1B4CD51300BD1F0B /* Frameworks */,
+				554E72FB1B4CD51300BD1F0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				554E73001B4CD51300BD1F0B /* PBXTargetDependency */,
+				554E73021B4CD51300BD1F0B /* PBXTargetDependency */,
+			);
+			name = FMProgressBarViewTests;
+			productName = FMProgressBarViewTests;
+			productReference = 554E72FD1B4CD51300BD1F0B /* FMProgressBarViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +319,13 @@
 						CreatedOnToolsVersion = 6.3.2;
 					};
 					554E72DD1B4CD4FF00BD1F0B = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 554E72C81B4CD4FF00BD1F0B;
+					};
+					554E72F21B4CD51300BD1F0B = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					554E72FC1B4CD51300BD1F0B = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 554E72C81B4CD4FF00BD1F0B;
 					};
@@ -183,6 +346,8 @@
 			targets = (
 				554E72C81B4CD4FF00BD1F0B /* FMProgressBarViewDemo */,
 				554E72DD1B4CD4FF00BD1F0B /* FMProgressBarViewDemoTests */,
+				554E72F21B4CD51300BD1F0B /* FMProgressBarView */,
+				554E72FC1B4CD51300BD1F0B /* FMProgressBarViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +364,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		554E72DC1B4CD4FF00BD1F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554E72F11B4CD51300BD1F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E73161B4CD95D00BD1F0B /* FMProgressBarView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554E72FB1B4CD51300BD1F0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +405,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		554E72EE1B4CD51300BD1F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E73141B4CD54600BD1F0B /* FMProgressBarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554E72F91B4CD51300BD1F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E73071B4CD51300BD1F0B /* FMProgressBarViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +428,21 @@
 			isa = PBXTargetDependency;
 			target = 554E72C81B4CD4FF00BD1F0B /* FMProgressBarViewDemo */;
 			targetProxy = 554E72DF1B4CD4FF00BD1F0B /* PBXContainerItemProxy */;
+		};
+		554E73001B4CD51300BD1F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554E72F21B4CD51300BD1F0B /* FMProgressBarView */;
+			targetProxy = 554E72FF1B4CD51300BD1F0B /* PBXContainerItemProxy */;
+		};
+		554E73021B4CD51300BD1F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554E72C81B4CD4FF00BD1F0B /* FMProgressBarViewDemo */;
+			targetProxy = 554E73011B4CD51300BD1F0B /* PBXContainerItemProxy */;
+		};
+		554E73091B4CD51300BD1F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554E72F21B4CD51300BD1F0B /* FMProgressBarView */;
+			targetProxy = 554E73081B4CD51300BD1F0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -342,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "@/**";
 				INFOPLIST_FILE = FMProgressBarViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "@/**";
 				INFOPLIST_FILE = FMProgressBarViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +605,81 @@
 			};
 			name = Release;
 		};
+		554E730D1B4CD51300BD1F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FMProgressBarView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		554E730E1B4CD51300BD1F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FMProgressBarView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		554E73111B4CD51300BD1F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FMProgressBarViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMProgressBarViewDemo.app/FMProgressBarViewDemo";
+			};
+			name = Debug;
+		};
+		554E73121B4CD51300BD1F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FMProgressBarViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMProgressBarViewDemo.app/FMProgressBarViewDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,6 +705,22 @@
 			buildConfigurations = (
 				554E72EC1B4CD4FF00BD1F0B /* Debug */,
 				554E72ED1B4CD4FF00BD1F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		554E730C1B4CD51300BD1F0B /* Build configuration list for PBXNativeTarget "FMProgressBarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554E730D1B4CD51300BD1F0B /* Debug */,
+				554E730E1B4CD51300BD1F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		554E73101B4CD51300BD1F0B /* Build configuration list for PBXNativeTarget "FMProgressBarViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554E73111B4CD51300BD1F0B /* Debug */,
+				554E73121B4CD51300BD1F0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
