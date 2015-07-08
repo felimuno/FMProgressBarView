@@ -27,51 +27,51 @@ import UIKit
         xibSetup()
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.clearColor() {
+    @IBInspectable public var borderColor: UIColor = UIColor.clearColor() {
         didSet {
             layer.borderColor = borderColor.CGColor
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = true;
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
             
         }
     }
-    @IBInspectable var title: String = "" {
+    @IBInspectable public var title: String = "" {
         didSet {
             layer.borderWidth = 1
             self.updateImages()
             
         }
     }
-    @IBInspectable var titleLoadingColor: UIColor = UIColor.blackColor() {
+    @IBInspectable public var titleLoadingColor: UIColor = UIColor.blackColor() {
         didSet {
             self.updateImages()
             
         }
     }
-    @IBInspectable var titleCompletedColor: UIColor = UIColor.blueColor() {
+    @IBInspectable  public var titleCompletedColor: UIColor = UIColor.blueColor() {
         didSet {
             self.updateImages()
             
         }
     }
-    @IBInspectable var backgroundLoadingColor: UIColor = UIColor.redColor() {
+    @IBInspectable public var backgroundLoadingColor: UIColor = UIColor.redColor() {
         didSet {
             self.updateImages()
             
         }
     }
-    @IBInspectable var backgroundCompletedColor: UIColor = UIColor.yellowColor() {
+    @IBInspectable public var backgroundCompletedColor: UIColor = UIColor.yellowColor() {
         didSet {
             self.updateImages()
             
