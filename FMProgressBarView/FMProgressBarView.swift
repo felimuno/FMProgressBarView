@@ -49,31 +49,34 @@ import UIKit
     @IBInspectable public var title: String = "" {
         didSet {
             layer.borderWidth = 1
-            self.updateImages()
             
         }
     }
     @IBInspectable public var titleLoadingColor: UIColor = UIColor.blackColor() {
         didSet {
             self.updateImages()
+            self.updateBar()
             
         }
     }
     @IBInspectable  public var titleCompletedColor: UIColor = UIColor.blueColor() {
         didSet {
             self.updateImages()
+            self.updateBar()
             
         }
     }
     @IBInspectable public var backgroundLoadingColor: UIColor = UIColor.redColor() {
         didSet {
             self.updateImages()
+            self.updateBar()
             
         }
     }
     @IBInspectable public var backgroundCompletedColor: UIColor = UIColor.yellowColor() {
         didSet {
             self.updateImages()
+            self.updateBar()
             
         }
     }
@@ -108,12 +111,12 @@ import UIKit
         let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         return view
     }
+    
     func updateImages(){
         self.loadingImage = self.getBarImage(self.backgroundLoadingColor,textColor:self.titleLoadingColor)
         self.completedImage = self.getBarImage(self.backgroundCompletedColor,textColor:self.titleCompletedColor)
-        self.updateBar()
-        
     }
+    
     func updateBar(){
         if(self.loadingImage == nil || self.completedImage == nil){
             self.updateImages()
@@ -141,7 +144,7 @@ import UIKit
     func getBarImage(color:UIColor, textColor:UIColor)->UIImage{
         
         // Setup the font specific variables
-        let aFont = UIFont.systemFontOfSize(25.0)
+        let aFont = UIFont.systemFontOfSize(27.0)
         var loadingText:NSString = self.title as NSString
         var style:NSMutableParagraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         style.alignment = NSTextAlignment.Center;
