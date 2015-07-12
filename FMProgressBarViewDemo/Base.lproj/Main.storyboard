@@ -50,8 +50,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="28t-6R-w3N">
-                                <rect key="frame" x="160" y="274" width="281" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="28t-6R-w3N">
+                                <rect key="frame" x="160" y="178" width="281" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VXQ-DV-MxB"/>
                                     <constraint firstAttribute="width" constant="277" id="nPN-lj-Wxs"/>
