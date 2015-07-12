@@ -14,8 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var pbar: FMProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //you can set the parameters on Interface Builder or programmatically
+        /*
+        self.pbar.title = "Custom Text.."
+        self.pbar.titleFont = UIFont(name:"Helvetica", size: 27.0)!
+        self.pbar.titleCompletedColor = UIColor.blackColor()
+        self.pbar.titleLoadingColor = UIColor.whiteColor()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        self.pbar.backgroundCompletedColor = UIColor.greenColor()
+        self.pbar.backgroundLoadingColor = UIColor.redColor()
+        
+        self.pbar.borderWidth = 1.0
+        self.pbar.borderColor = UIColor.blueColor()
+        */
     }
 
     override func didReceiveMemoryWarning() {

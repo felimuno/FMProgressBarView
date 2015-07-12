@@ -33,22 +33,22 @@ import UIKit
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 1.0 {
         didSet {
             layer.cornerRadius = cornerRadius
-            layer.masksToBounds = true;
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth
-            
+            self.updateBar()
         }
     }
     @IBInspectable public var title: String = "" {
         didSet {
-            layer.borderWidth = 1
+            self.updateImages()
+            self.updateBar()
             
         }
     }
@@ -81,12 +81,19 @@ import UIKit
         }
     }
     
-    
     @IBInspectable public var progressPercent: CGFloat = 0 {
         didSet {
             if(progressPercent >= 0 && progressPercent <= 1.0){
                 self.updateBar()
             }
+        }
+    }
+    
+    public var titleFont: UIFont = UIFont.systemFontOfSize(25.0) {
+        didSet {
+            self.updateImages()
+            self.updateBar()
+            
         }
     }
     
@@ -123,40 +130,45 @@ import UIKit
         }
         self.backgroundImage.image = self.updateViewWithPercent(progressPercent,text: title as NSString)
         self.backgroundImage.clipsToBounds = true
+        self.layer.masksToBounds = true
     }
     
     func updateViewWithPercent(percent:CGFloat, text:NSString) -> UIImage{
         return getmixedimages(percent, im1:self.completedImage ,im2:self.loadingImage)
     }
+    
     func getmixedimages(percent:CGFloat,im1:UIImage,im2:UIImage)->UIImage{
+        
         UIGraphicsBeginImageContext(im1.size)
-        im1.drawInRect(CGRectMake(0,0,im1.size.width,im1.size.height));
+        
+        im1.drawInRect(CGRectMake(0,0,im1.size.width,im1.size.height))
         if(percent > 0){
             var newRect = CGRectMake(0,0,ceil(im1.size.width*percent),im1.size.height)
             var croppedImage:CGImageRef = CGImageCreateWithImageInRect (im2.CGImage, newRect)
-            UIImage(CGImage:croppedImage)!.drawInRect(CGRectMake(0,0,ceil(im1.size.width*percent),im1.size.height));
+            UIImage(CGImage:croppedImage)!.drawInRect(CGRectMake(0,0,ceil(im1.size.width*percent),im1.size.height))
         }
         var newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
         return newImage
     }
     
     func getBarImage(color:UIColor, textColor:UIColor)->UIImage{
         
-        // Setup the font specific variables
-        let aFont = UIFont.systemFontOfSize(27.0)
+        // Setup text parameters
+        let aFont = self.titleFont
         var loadingText:NSString = self.title as NSString
         var style:NSMutableParagraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
-        style.alignment = NSTextAlignment.Center;
-        
+        style.alignment = NSTextAlignment.Center
         let attr:CFDictionaryRef = [NSFontAttributeName:aFont,NSForegroundColorAttributeName:textColor,NSParagraphStyleAttributeName:style]
         var textSize = loadingText.sizeWithAttributes(attr as [NSObject : AnyObject])
         
         //draw text in view
         let viewSize = self.view.frame.size
-        UIGraphicsBeginImageContext(viewSize);
         
-        let context = UIGraphicsGetCurrentContext();
+        UIGraphicsBeginImageContext(viewSize)
+        
+        let context = UIGraphicsGetCurrentContext()
         
         // set the fill color
         color.setFill()
@@ -171,8 +183,9 @@ import UIKit
             rect.size.width,
             textSize.height), withAttributes: attr as [NSObject : AnyObject])
         var coloredImg = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
-        return coloredImg;
+        return coloredImg
     }
     
 }
