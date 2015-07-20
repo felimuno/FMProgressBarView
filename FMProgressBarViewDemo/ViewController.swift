@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mySlider: UISlider!
     @IBOutlet weak var pbar: FMProgressBarView!
+    @IBOutlet weak var pbar2: FMProgressBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //you can set the parameters on Interface Builder or programmatically
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
         self.pbar.borderWidth = 1.0
         self.pbar.borderColor = UIColor.blueColor()
         */
+        self.pbar.titleFont = UIFont(name:"Helvetica", size: 27.0)!
+        self.pbar2.titleFont = UIFont(name:"Helvetica", size: 27.0)!
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +42,7 @@ class ViewController: UIViewController {
         var currentValue = sender.value/sender.maximumValue
         
         pbar.progressPercent = CGFloat(currentValue)
+        pbar2.progressPercent = CGFloat(currentValue)
     }
 
 }

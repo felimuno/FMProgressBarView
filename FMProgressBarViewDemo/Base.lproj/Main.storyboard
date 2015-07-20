@@ -19,12 +19,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpl-ge-osQ" customClass="FMProgressBarView" customModule="FMProgressBarView">
                                 <rect key="frame" x="136" y="88" width="328" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WHM-St-OFE"/>
+                                    <constraint firstAttribute="width" constant="328" id="nTQ-Rc-drn"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.20037917792797089" green="0.097273625433444977" blue="0.71310323476791382" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progressPercent">
                                         <real key="value" value="0.5"/>
@@ -37,10 +41,10 @@
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleLoadingColor">
-                                        <color key="value" red="0.49797719717025757" green="0.65602809190750122" blue="0.79191398620605469" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.25445273518562317" green="0.49267604947090149" blue="0.7451324462890625" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleCompletedColor">
-                                        <color key="value" red="0.75447162830000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.98594444990158081" green="0.0" blue="0.051752343773841858" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundLoadingColor">
                                         <color key="value" red="0.90687078237533569" green="0.0" blue="0.037041693925857544" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,34 +52,86 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundCompletedColor">
                                         <color key="value" red="0.42346833881578949" green="1" blue="0.20000000000000001" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImageLoading" value="t1"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImageCompleted" value="t2"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="28t-6R-w3N">
-                                <rect key="frame" x="160" y="178" width="281" height="31"/>
+                                <rect key="frame" x="160" y="380" width="281" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VXQ-DV-MxB"/>
-                                    <constraint firstAttribute="width" constant="277" id="nPN-lj-Wxs"/>
+                                    <constraint firstAttribute="height" constant="30" id="QfT-DZ-gqR"/>
+                                    <constraint firstAttribute="width" constant="277" id="fQY-8o-0lQ"/>
                                 </constraints>
                                 <connections>
                                     <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nKO-ao-CeO"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-J3-mKX" customClass="FMProgressBarView" customModule="FMProgressBarView">
+                                <rect key="frame" x="136" y="177" width="328" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="HAh-EU-7jk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eCf-9I-zBI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="nEr-gj-VpJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="tdh-tT-QS1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.20037917790000001" green="0.097273625429999996" blue="0.71310323480000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressPercent">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Loading"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleLoadingColor">
+                                        <color key="value" red="0.2544527352" green="0.49267604949999999" blue="0.74513244629999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleCompletedColor">
+                                        <color key="value" red="0.18925705552101135" green="0.90113431215286255" blue="0.020399760454893112" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundLoadingColor">
+                                        <color key="value" red="0.90687078239999996" green="0.0" blue="0.037041693930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundCompletedColor">
+                                        <color key="value" red="0.42346833880000001" green="1" blue="0.20000000000000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImageLoading" value="t1"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImageCompleted" value="t2"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useImages" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="dpl-ge-osQ" secondAttribute="centerX" id="3fa-h1-aUB"/>
-                            <constraint firstItem="28t-6R-w3N" firstAttribute="top" secondItem="dpl-ge-osQ" secondAttribute="bottom" constant="40" id="96v-zX-71e"/>
-                            <constraint firstItem="dpl-ge-osQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="XeE-CF-Vcd"/>
-                            <constraint firstAttribute="centerX" secondItem="28t-6R-w3N" secondAttribute="centerX" id="mn8-gj-IgY"/>
+                            <constraint firstItem="dpl-ge-osQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="Ddi-Ek-6mB"/>
+                            <constraint firstAttribute="centerX" secondItem="TpJ-J3-mKX" secondAttribute="centerX" id="IuG-RF-qgU"/>
+                            <constraint firstAttribute="centerX" secondItem="dpl-ge-osQ" secondAttribute="centerX" id="TGH-rB-J6C"/>
+                            <constraint firstItem="28t-6R-w3N" firstAttribute="top" secondItem="dpl-ge-osQ" secondAttribute="bottom" constant="242" id="YVa-bf-2Ri"/>
+                            <constraint firstAttribute="centerX" secondItem="28t-6R-w3N" secondAttribute="centerX" id="gD1-nl-xUv"/>
+                            <constraint firstItem="TpJ-J3-mKX" firstAttribute="top" secondItem="dpl-ge-osQ" secondAttribute="bottom" constant="39" id="nRc-pv-j3G"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mySlider" destination="28t-6R-w3N" id="83P-vj-LT5"/>
                         <outlet property="pbar" destination="dpl-ge-osQ" id="noT-ld-6GW"/>
+                        <outlet property="pbar2" destination="TpJ-J3-mKX" id="jh9-lU-alp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="t1" width="500" height="335"/>
+        <image name="t2" width="512" height="512"/>
+    </resources>
 </document>
