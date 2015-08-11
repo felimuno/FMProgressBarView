@@ -28,7 +28,10 @@ class ViewController: UIViewController {
         
         self.pbar.borderWidth = 1.0
         self.pbar.borderColor = UIColor.blueColor()
+        
+        self.pbar2.useImages = true
         */
+
         self.pbar.titleFont = UIFont(name:"Helvetica", size: 27.0)!
         self.pbar2.titleFont = UIFont(name:"Helvetica", size: 27.0)!
     }
