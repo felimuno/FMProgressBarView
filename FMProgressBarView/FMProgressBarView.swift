@@ -141,12 +141,11 @@ import UIKit
     
     func updateImages(){
         if(!self.useImages || self.backgroundImageLoading == nil || self.backgroundImageCompleted == nil ){
-        self.loadingImage = self.getBarImage(self.backgroundLoadingColor,textColor:self.titleLoadingColor)
-        self.completedImage = self.getBarImage(self.backgroundCompletedColor,textColor:self.titleCompletedColor)
+            self.loadingImage = self.getBarImage(self.backgroundLoadingColor,textColor:self.titleLoadingColor)
+            self.completedImage = self.getBarImage(self.backgroundCompletedColor,textColor:self.titleCompletedColor)
         }
         else{
-            //println("im \(self.backgroundImageLoading.size) 2 \(self.backgroundImageLoading.size)")
-            self.loadingImage = self.getBarCustomImage(self.backgroundImageLoading!, textColor: titleLoadingColor) // self.backgroundImageLoading
+            self.loadingImage = self.getBarCustomImage(self.backgroundImageLoading!, textColor: titleLoadingColor)
             self.completedImage = self.getBarCustomImage(self.backgroundImageCompleted!, textColor: self.titleCompletedColor)
         }
     }
@@ -156,20 +155,14 @@ import UIKit
             self.useImages = false
             self.updateImages()
         }
-        self.backgroundImage.image = self.updateViewWithPercent(progressPercent,text: title as NSString)
+        
+        self.backgroundImage.image = self.getMixedImages(progressPercent, im1:self.completedImage, im2:self.loadingImage)
         self.backgroundImage.clipsToBounds = true
         self.layer.masksToBounds = true
-        }
-
-    func updateViewWithPercent(percent:CGFloat, text:NSString) -> UIImage{
-        
-        return getmixedimages(percent, im1:self.completedImage ,im2:self.loadingImage)
     }
     
-    func getmixedimages(percent:CGFloat,im1:UIImage,im2:UIImage)->UIImage{
-        
+    func getMixedImages(percent:CGFloat,im1:UIImage,im2:UIImage)->UIImage{
         UIGraphicsBeginImageContext(im1.size)
-        
         im1.drawInRect(CGRectMake(0,0,im1.size.width,im1.size.height))
         
         if(percent > 0 && percent <= 1.0){
@@ -178,12 +171,13 @@ import UIKit
             var croppedImage:CGImageRef = CGImageCreateWithImageInRect (im2.CGImage, newRect)
             UIImage(CGImage:croppedImage)!.drawInRect(CGRectMake(0,0,ceil(im1.size.width*percent),im1.size.height))
         }
-        var newImage = UIGraphicsGetImageFromCurrentImageContext()
         
+        var newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
         return newImage
     }
-    
+    /*generating image with color background*/
     func getBarImage(color:UIColor, textColor:UIColor)->UIImage{
         
         // Setup text parameters
@@ -218,6 +212,7 @@ import UIKit
         UIGraphicsEndImageContext()
         return coloredImg
     }
+    /*generating image with custom background*/
     func getBarCustomImage(image:UIImage, textColor:UIColor)->UIImage{
         
         // Setup text parameters
